@@ -8,137 +8,6 @@ Engine::Engine() {
     field = std::make_shared<GameField>();
 }
 
-void Engine::game(const Command &cmd) {
-    switch (state) {
-    case (GameState::PLAYERS_REGISTRATION):
-        switch(cmd.type) {
-        case(Cmd_from_user::REGISTER_PLAYER):
-            join_player(cmd.name);
-            break;
-        case (Cmd_from_user::START):
-            if (players.size() == 0) {
-                throw;
-            }
-            start_game();
-            state = GameState::PUT_INITIAL_INFRASTRUCTURES_DIRECT;
-            player_num = 0;
-            break;
-        default:
-            throw;
-        }
-        break;
-    case (GameState::PUT_INITIAL_INFRASTRUCTURES_DIRECT):
-        if (cmd.type != Cmd_from_user::REGISTER_OBJ) {
-            throw;
-        }
-        if (field->roads.count(cmd.road)) {
-            throw;
-        }
-        field->roads.insert(std::make_pair(road_pos(cmd.road), Object(player_num)));
-        players[player_num].object_cards[ObjectType::ROAD]--;
-        try {
-            register_town(cmd.cross);
-        }
-        catch (...) {
-            undo_obj_registration(cmd.road);
-            throw ;
-        }
-        player_num++;
-        if (player_num == players.size()) {
-            state = GameState::PUT_INITIAL_INFRASTRUCTURE_REVERCE;
-        }
-        break;
-    case (GameState::PUT_INITIAL_INFRASTRUCTURE_REVERCE):
-        if (cmd.type != Cmd_from_user::REGISTER_OBJ) {
-            throw;
-        }
-        register_road(cmd.road);
-        try {
-            register_town(cmd.cross);
-        } catch (...) {
-            undo_obj_registration(cmd.road);
-            throw;
-        }
-        get_init_resource(cmd.cross);
-        player_num--;
-        if (player_num == -1) {
-            state = GameState::STAGE1_DICE;
-        }
-        break;
-    case (GameState::STAGE1_DICE) :
-        if (cmd.type != Cmd_from_user::MAKE_DICE) {
-            throw;
-        }
-        make_dice();
-        break;
-    case (GameState::STAGE1_DROP_RECOURCES):
-        for (auto x : players) {
-            drop_resource(x);
-        }
-        state = GameState::STAGE1_MOVE_ROBBER;
-        break;
-    case (GameState::STAGE1_MOVE_ROBBER) :
-        if (cmd.type != Cmd_from_user::MOVE_ROBBER) {
-            throw;
-        }
-        move_robber(cmd.hex);
-        break;
-    case (GameState::STAGE1_ROBBING) : {
-        if (cmd.type != Cmd_from_user::ROB) {
-            throw ;
-        }
-        std::set<int> can_be_robbed;
-        auto crosses = neighbour_crosses(field->robber_pos);
-        for (auto x : crosses) {
-            can_be_robbed.insert(field->settlements.find(x)->second.owner);
-        }
-        for (auto x : can_be_robbed) {
-            if (players[x].name == cmd.name) {
-                rob(players[x]);
-                state = GameState::STAGE2;
-                return;
-            }
-        }
-        throw ;
-        }
-        break;
-    case (GameState::STAGE2) :
-        switch (cmd.type) {
-        case (Cmd_from_user::EXCHANGE_RES) :
-            exchange_with_field(cmd.player_res, cmd.bank_res);
-            break;
-        case (Cmd_from_user::END_EXCHANGE) :
-            state = GameState::STAGE3;
-            break;
-        default:
-            throw ;
-        }
-    case (GameState::STAGE3) :
-        switch (cmd.type) {
-        case(Cmd_from_user::BUILD) :
-            switch (cmd.obj_type) {
-            case (ObjectType::ROAD) :
-                build_road(cmd.road);
-                break;
-            case (ObjectType::TOWN) :
-            case (ObjectType::CITY) :
-                build_city(cmd.cross);
-                break;
-            default: throw;
-            }
-            break;
-        case (Cmd_from_user::END_BUILDING) :
-            if (!next_player()) {
-                return;//WINNER!
-            }
-            break;
-        default:
-            throw;
-        }
-        break;
-    default: throw;
-    }
-}
 
 template<class T>
 bool check_owner(const std::vector<T> positions, const std::map<T, Object> list, int player) {
@@ -187,6 +56,9 @@ coord_t gen_coord() {
 }
 
 void Engine::start_game() {
+    if (players.size() == 0 || state != GameState::PLAYERS_REGISTRATION) {
+        throw;
+    }
     field = std::make_shared<GameField>();
     std::srand(std::time(nullptr));
     int numbers[11] = {1, 2, 2, 2, 2, 0, 2, 2, 2, 2, 1};
@@ -214,6 +86,48 @@ void Engine::start_game() {
             res[res_num]--;
             field->hexes.insert(std::make_pair(hex_num, Hex(coord_t(i, j), Resource(res_num))));
             }
+    }
+    state = GameState::PUT_INITIAL_INFRASTRUCTURES_DIRECT;
+    player_num = 0;
+}
+
+void Engine::put_initial_infrastructure(cross_pos cross, road_pos road) {
+    if (state != GameState::PUT_INITIAL_INFRASTRUCTURE_REVERCE &&
+            state != GameState::PUT_INITIAL_INFRASTRUCTURES_DIRECT) {
+        throw;
+    }
+    if (state == GameState::PUT_INITIAL_INFRASTRUCTURES_DIRECT) {
+        if (field->roads.count(road)) {
+            throw;
+        }
+        field->roads.insert(std::make_pair(road_pos(road), Object(player_num)));
+        players[player_num].object_cards[ObjectType::ROAD]--;
+        try {
+            register_town(cross);
+        }
+        catch (...) {
+            undo_obj_registration(road);
+            throw ;
+        }
+        if (player_num == players.size()) {
+            state = GameState::PUT_INITIAL_INFRASTRUCTURE_REVERCE;
+        } else {
+            player_num++;
+        }
+    } else {
+        register_road(road);
+        try {
+            register_town(cross);
+        } catch (...) {
+            undo_obj_registration(road);
+            throw;
+        }
+        get_init_resource(cross);
+        if (player_num == 0) {
+            state = GameState::STAGE1_DICE;
+        } else {
+            player_num--;
+        }
     }
 }
 
@@ -277,9 +191,14 @@ void Engine::get_resources() {
 }
 
 void Engine::make_dice() {
+    if (state != GameState::STAGE1_DICE) {
+        throw;
+    }
     field->dice_score = rand() % 6 + 2 + rand() % 6;
     if (field->dice_score == int(Limits::MAGIC_NUM)) {
-        state = GameState::STAGE1_DROP_RECOURCES;
+        for (auto x : players) {
+            drop_resource(x);
+        }
     } else {
         get_resources();
         state = GameState::STAGE2;
@@ -300,7 +219,7 @@ bool Engine::drop_resource(Player &player) {
     return false;
 }
 
-void Engine::move_robber(coord_t pos) {
+void Engine::move_robber(const coord_t &pos) {
     field->robber_pos = pos;
     auto crosses = neighbour_crosses(pos);
     for (auto it = crosses.begin(); it != crosses.end();) {
@@ -317,21 +236,39 @@ void Engine::move_robber(coord_t pos) {
     state = GameState::STAGE1_ROBBING;
 }
 
-bool Engine::rob(Player& robbed) {
-    if (robbed.resource_cards.sum() != 0) {
-        while (true) {
-            int res = rand() % 5;
-            if (robbed.resource_cards[Resource(res)] != 0) {
-                robbed.resource_cards[Resource(res)]--;
-                players[player_num].resource_cards[Resource(res)]++;
-                return true;
+bool Engine::rob(const string &robbed) {
+    if (state != GameState::STAGE1_ROBBING) {
+        throw;
+    }
+    std::set<int> can_be_robbed;
+    auto crosses = neighbour_crosses(field->robber_pos);
+    for (auto x : crosses) {
+        can_be_robbed.insert(field->settlements.find(x)->second.owner);
+    }
+    for (auto x : can_be_robbed) {
+        if (players[x].name == robbed) {
+            if (players[x].resource_cards.sum() != 0) {
+                while (true) {
+                    int res = rand() % 5;
+                    if (players[x].resource_cards[Resource(res)] != 0) {
+                        players[x].resource_cards[Resource(res)]--;
+                        players[player_num].resource_cards[Resource(res)]++;
+                    }
+                }
+            } else {
+                return false; //wasn't robbed
             }
+            state = GameState::STAGE2;
+            return true;
         }
     }
-    return false;
+    throw ;
 }
 
 void Engine::exchange_with_field(Resource player_resourse, Resource bank_resource) {
+    if (state != GameState::STAGE2) {
+        throw ;
+    }
     if (players[player_num].resource_cards[player_resourse] < 4) {
         throw; //ERROR
     }
@@ -344,7 +281,17 @@ void Engine::exchange_with_field(Resource player_resourse, Resource bank_resourc
     players[player_num].resource_cards[bank_resource]++;
 }
 
+void Engine::end_exchanges() {
+    if (state != GameState::STAGE2) {
+        throw;
+    }
+    state = GameState::STAGE3;
+}
+
 void Engine::build_road(road_pos pos) {
+    if (state != GameState::STAGE3) {
+        throw ;
+    }
     if (players[player_num].resource_cards < road_request) {
         throw;//ERROR
     }
@@ -354,6 +301,9 @@ void Engine::build_road(road_pos pos) {
 }
 
 void Engine::build_town(cross_pos pos) {
+    if (state != GameState::STAGE3) {
+        throw ;
+    }
     if (players[player_num].resource_cards < town_request) {
         throw;//ERROR
     }
@@ -363,6 +313,9 @@ void Engine::build_town(cross_pos pos) {
 }
 
 void Engine::build_city(cross_pos pos) {
+    if (state != GameState::STAGE3) {
+        throw ;
+    }
     if (players[player_num].resource_cards < city_request) {
         throw ;//ERROR
     }
@@ -380,6 +333,9 @@ void Engine::build_city(cross_pos pos) {
 }
 
 bool Engine::next_player() {
+    if (state != GameState::STAGE3) {
+        throw ;
+    }
     if (players[player_num].score >= 10) {
         state = GameState::FINAL;
         return false;
@@ -388,6 +344,6 @@ bool Engine::next_player() {
     return true;
 }
 
-field_ptr Engine::get_field() {
+field_ptr Engine::get_field() const{
     return field;
 }
