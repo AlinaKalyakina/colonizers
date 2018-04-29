@@ -3,56 +3,57 @@
 #include "gamefield.h"
 #include <vector>
 #include <map>
-#include "interface.h"
 using std::string;
 
 const Pack<Resource> road_request = Pack<Resource>(0, 1, 0, 0, 1);
 const Pack<Resource> town_request = Pack<Resource>(1, 1, 0, 1, 1);
 const Pack<Resource> city_request = Pack<Resource>(2, 0, 3, 0, 0);
 
-struct Request {
-    int player_from;
-    int what[5], into[5];
-    Request(int from, int what[5], int into[5]);
+enum class Cmd_from_user{REGISTER_PLAYER, START, REGISTER_OBJ, MOVE_ROBBER,
+                         ROB, MAKE_DICE, EXCHANGE_RES, END_EXCHANGE,
+                        BUILD, END_BUILDING};
+
+struct Command {
+   Cmd_from_user type;
+   string name;
+   coord_t hex;
+   ObjectType obj_type;
+   road_pos road;
+   cross_pos cross;
+   Resource player_res;
+   Resource bank_res;
 };
 
 class Engine
 {
-    Interface interface;
     field_ptr field = nullptr;
-    enum class GameState{INTRODUCTION, PLAYERS_REGISTRATION, INFRASTRUCTURES_REGISTRATION, PUT_INITIAL_INFRASTRUCTURES,
+    enum class GameState{FINAL, PLAYERS_REGISTRATION, PUT_INITIAL_INFRASTRUCTURES_DIRECT, PUT_INITIAL_INFRASTRUCTURE_REVERCE,
                          STAGE1_DICE, STAGE1_DROP_RECOURCES, STAGE1_MOVE_ROBBER, STAGE1_ROBBING, STAGE2, STAGE3};
 
-    GameState state = GameState::INTRODUCTION;
-    int player_num = 0;
-    std::multimap<int, Request> requests;
+    GameState state = GameState::PLAYERS_REGISTRATION;
+    long player_num = -1;
     std::vector<Player> players;
-    bool check_way(cross_pos pos, road_pos prev_road);
-    cross_pos initial_registration(const Player&);
-    void get_init_resource(cross_pos, Player&);
+    void undo_obj_registration(road_pos);
+    void get_init_resource(cross_pos);
     void get_resources();
     void join_player(const string &player_name);
     void start_game();
-    void register_road(int player_num, road_pos);
-    void register_settlement(int player_num, const cross_pos&, ObjectType);
-    //void put_initial_infrastructure();
+    void register_road(const road_pos&);
+    void register_town(const cross_pos&);
+    void put_initial_infrastructure(cross_pos, road_pos);
     void make_dice();
-    void drop_resource(Player&);
+    bool drop_resource(Player&);
     void move_robber(coord_t pos);
-    void rob(int player_num);
+    bool rob(Player& robbed);
     void exchange_with_field(Resource player_resourse,
                              Resource bank_resource);
-    void exchange_players_request(int player_to, int player_from,
-                                  int resource_from[5], int resource_to[5]);
-    void exchange_players_accept(std::multimap<int, Request>::iterator pos);
-    void end_exchanges();
     void build_road(road_pos);
     void build_town(cross_pos);
     void build_city(cross_pos);
-    void next_player();
+    bool next_player();
 public:
     Engine();
-    void game();
+    void game(const Command&);
     field_ptr get_field();
     std::vector<Player> get_players();
 };

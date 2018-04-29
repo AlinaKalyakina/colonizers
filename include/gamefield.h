@@ -115,7 +115,7 @@ int Pack<T>::sum() {
 
 struct Player
 {
-    int id;
+    long id;
     std::string name;
     Pack<Resource> resource_cards = {0,0,0,0,0};
     Pack<ObjectType> object_cards = Pack<ObjectType>(int(Limits::MAX_ROAD_NUM),
@@ -129,11 +129,11 @@ typedef std::shared_ptr<Player> player_ptr;
 struct Hex {
     coord_t pos;
     Resource type = Resource::NO_RESOURCE;
-    Hex(coord_t, Resource type = Resource::NO_RESOURCE);
+    Hex(coord_t = std::make_pair(0, 0), Resource type = Resource::NO_RESOURCE);
 };
 
 struct Object {
-    int owner;
+    long owner;
     ObjectType type;
     Object(int owner, ObjectType type = ObjectType::ROAD);
 };
@@ -149,12 +149,12 @@ struct GameField {
 
 typedef std::shared_ptr<GameField> field_ptr;
 
-std::vector<Hex> neighbour_hexes(cross_pos);
-std::vector<cross_pos> neighbour_crosses(coord_t hex);
-std::vector<cross_pos> neighbour_crosses(road_pos);
-std::vector<cross_pos> neighbour_crosses(cross_pos);
-std::vector<road_pos> neighbour_roads (road_pos);
-std::vector<road_pos> neighbour_roads (cross_pos);
-bool belong_field(cross_pos cross);
-cross_pos next_cross(cross_pos, road_pos);
+std::set<coord_t> neighbour_hexes(const cross_pos &);
+std::vector<cross_pos> neighbour_crosses(const coord_t &);
+std::vector<cross_pos> neighbour_crosses(const road_pos&);
+std::vector<cross_pos> neighbour_crosses(const cross_pos&);
+std::vector<road_pos> neighbour_roads (const road_pos&);
+std::vector<road_pos> neighbour_roads (const cross_pos&);
+bool belong_field(const cross_pos& cross);
+cross_pos next_cross(const cross_pos&, const road_pos&);
 #endif // GAMEFIELD_H

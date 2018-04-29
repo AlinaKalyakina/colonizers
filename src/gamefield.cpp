@@ -8,13 +8,13 @@ Object::Object(int player, ObjectType t) : owner(player), type(t) {}
 
 
 template <int N>
-coord_t neighbour(coord_t& x) {
+coord_t neighbour(const coord_t& x) {
     coord_t shifts[6] = {coord_t(1, 0), coord_t(0, 1), coord_t(-1, 1),
                         coord_t(-1, 0), coord_t(0, -1), coord_t(1, -1)};
     return coord_t(x.first + shifts[N].first, x.second +shifts[N].second);
 }
 
-bool belong_field(road_pos road) {
+bool belong_field(const road_pos &road) {
     auto x = road.first.first;
     auto y = road.first.second;
     switch (road.second) {
@@ -42,7 +42,7 @@ bool belong_field(road_pos road) {
     return false;
 }
 
-bool belong_field(cross_pos cross) {
+bool belong_field(const cross_pos &cross) {
     auto neigh = neighbour_roads(cross);
     for (auto x : neigh) {
         if (belong_field(x)) {
@@ -52,7 +52,7 @@ bool belong_field(cross_pos cross) {
     return false;
 }
 
-std::vector<cross_pos> neighbour_crosses(coord_t hex) {
+std::vector<cross_pos> neighbour_crosses(const coord_t & hex) {
     std::vector<cross_pos> result;
     cross_pos neigh[6];
     neigh[0].first = neigh[1].first = hex;
@@ -72,7 +72,7 @@ std::vector<cross_pos> neighbour_crosses(coord_t hex) {
     return result;
 }
 
-std::vector<cross_pos> neighbour_crosses(road_pos road) {
+std::vector<cross_pos> neighbour_crosses(const road_pos &road) {
     cross_pos pos1, pos2;
     if (road.second == RoadCoord::UP ||  road.second ==RoadCoord::RIGHT) {
         pos1 = cross_pos(neighbour<2>(road.first), CrossCoord::BOTTOM);
@@ -95,7 +95,7 @@ std::vector<cross_pos> neighbour_crosses(road_pos road) {
     return res;
 }
 
-std::vector<cross_pos> neighbour_crosses(cross_pos cross) {
+std::vector<cross_pos> neighbour_crosses(const cross_pos &cross) {
     cross_pos neighbours[3];
     if (cross.second == CrossCoord::BOTTOM) {
         neighbours[0] = cross_pos(neighbour<4>(cross.first), CrossCoord::TOP);
@@ -117,7 +117,7 @@ std::vector<cross_pos> neighbour_crosses(cross_pos cross) {
     return res;
 }
 
-std::vector<road_pos> neighbour_roads(road_pos road) {
+std::vector<road_pos> neighbour_roads(const road_pos& road) {
     road_pos neighbours[4];
     std::vector<road_pos> res;
     if (road.second == RoadCoord::UP || road.second == RoadCoord::RIGHT) {
@@ -149,7 +149,7 @@ std::vector<road_pos> neighbour_roads(road_pos road) {
     return res;
 }
 
-std::vector<road_pos> neighbour_roads (cross_pos cross) {
+std::vector<road_pos> neighbour_roads (const cross_pos &cross) {
     road_pos neigh[3];
     std::vector<road_pos> res;
     if (cross.second == CrossCoord::TOP) {
@@ -169,7 +169,28 @@ std::vector<road_pos> neighbour_roads (cross_pos cross) {
     return res;
 }
 
-cross_pos next_cross(cross_pos cross, road_pos road) {
+
+std::set<coord_t> neighbour_hexes(const cross_pos &pos) {
+    coord_t neigh[3];
+    std::set<coord_t> res;
+    neigh[0] = pos.first;
+    if (pos.second == CrossCoord::TOP) {
+        neigh[1] = neighbour<1>(pos.first);
+        neigh[2] = neighbour<2>(pos.first);
+    } else {
+        neigh[1] = neighbour<4>(pos.first);
+        neigh[2] = neighbour<5>(pos.first);
+    }
+    for (int i = 0; i < 3; i++) {
+        if (neigh[i].second >= - 2 * (i >= 0) - (2 + i) * (i < 0)
+                && neigh[i].second <= (2 - i) * (i >= 0) + 2 * (i < 0)) {
+            res.insert(neigh[i]);
+        }
+    }
+    return res;
+}
+
+cross_pos next_cross(const cross_pos &cross, const road_pos &road) {
     auto crosses = neighbour_crosses(road);
     for (auto x : crosses) {
         if (x != cross) {
