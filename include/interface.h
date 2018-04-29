@@ -11,7 +11,6 @@ class Interface
 {
     const Engine engine;
     const field_ptr field = nullptr;
-    Command cmd;
     void show_field();
     void get_cmd();
 public:

@@ -8,13 +8,11 @@ using std::string;
 const Pack<Resource> road_request = Pack<Resource>(0, 1, 0, 0, 1);
 const Pack<Resource> town_request = Pack<Resource>(1, 1, 0, 1, 1);
 const Pack<Resource> city_request = Pack<Resource>(2, 0, 3, 0, 0);
-
+enum class GameState{FINAL, PLAYERS_REGISTRATION, PUT_INITIAL_INFRASTRUCTURES_DIRECT, PUT_INITIAL_INFRASTRUCTURE_REVERCE,
+                     STAGE1_DICE, STAGE1_MOVE_ROBBER, STAGE1_ROBBING, STAGE2, STAGE3};
 class Engine
 {
     field_ptr field = nullptr;
-    enum class GameState{FINAL, PLAYERS_REGISTRATION, PUT_INITIAL_INFRASTRUCTURES_DIRECT, PUT_INITIAL_INFRASTRUCTURE_REVERCE,
-                         STAGE1_DICE, STAGE1_MOVE_ROBBER, STAGE1_ROBBING, STAGE2, STAGE3};
-
     GameState state = GameState::PLAYERS_REGISTRATION;
     long player_num = -1;
     std::vector<Player> players;
@@ -41,6 +39,12 @@ public:
     Engine();
     field_ptr get_field() const;
     std::vector<Player> get_players() const;
+    void set_state(GameState x) {
+        state = x;
+    }
+    void insert_player() {
+        players.push_back(Player());
+    }
 };
 
 #endif // DRIVER_H

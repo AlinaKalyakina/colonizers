@@ -59,7 +59,6 @@ void Engine::start_game() {
     if (players.size() == 0 || state != GameState::PLAYERS_REGISTRATION) {
         throw;
     }
-    field = std::make_shared<GameField>();
     std::srand(std::time(nullptr));
     int numbers[11] = {1, 2, 2, 2, 2, 0, 2, 2, 2, 2, 1};
     int res[5] = {3, 3, 3, 3, 3};
@@ -75,16 +74,16 @@ void Engine::start_game() {
             if (coord == coord_t(i, j)) { //NOT DESERT
                 continue;
             }
-            num_it++;
-            while (numbers[hex_num = rand() % 12] == 0) {};
-            if (num_it <= 15) {
+            while (numbers[hex_num = rand() % 11] == 0) {};
+            if (num_it < 15) {
                 while (res[res_num = rand() % int(Resource::NUMBER)] == 0) {}
+                num_it++;
             } else {
-                res_num = rand() % 12;
+                res_num = rand() % 5;
             }
             numbers[hex_num]--;
             res[res_num]--;
-            field->hexes.insert(std::make_pair(hex_num, Hex(coord_t(i, j), Resource(res_num))));
+            field->hexes.insert(std::make_pair(hex_num + 2, Hex(coord_t(i, j), Resource(res_num))));
             }
     }
     state = GameState::PUT_INITIAL_INFRASTRUCTURES_DIRECT;

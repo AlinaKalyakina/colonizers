@@ -29,7 +29,7 @@ struct Pack {
     Pack<T>& operator-= (const Pack<T>& x);
     Pack<T>& operator+= (const Pack<T>& x);
     bool operator< (const Pack<T>& x);
-    bool operator> (const Pack<T>& x);
+    bool operator>= (const Pack<T>& x);
     int sum();
 };
 
@@ -78,6 +78,14 @@ bool Pack<T>::operator< (const Pack<T>& x) {
     return true;
 }
 
+template<class T>
+bool Pack<T>::operator>= (const Pack<T>& x) {
+    for (int i = 0; i < int(T::NUMBER); i++) {
+        if (card[i] < x.card[i]) return false;
+    }
+    return true;
+}
+
 template <class T>
 int Pack<T>::sum() {
     int sum = 0;
@@ -121,7 +129,7 @@ struct Player
     Pack<ObjectType> object_cards = Pack<ObjectType>(int(Limits::MAX_ROAD_NUM),
               int(Limits::MAX_TOWN_NUM), int(Limits::MAX_CITY_NUM));
     int score = 0;
-    Player(const std::string &name);
+    Player(const std::string &name = "");
 };
 
 typedef std::shared_ptr<Player> player_ptr;

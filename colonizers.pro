@@ -4,10 +4,10 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-    src/main.cpp \
     src/engine.cpp \
     src/gamefield.cpp \
-    src/interface.cpp
+    src/interface.cpp \
+    src/main.cpp
 
 HEADERS += \
     include/engine.h \
