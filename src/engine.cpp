@@ -8,6 +8,9 @@ Engine::Engine() {
     field = std::make_shared<GameField>();
 }
 
+std::vector<Player> Engine::get_players() const {
+    return players;
+}
 
 template<class T>
 bool check_owner(const std::vector<T> positions, const std::map<T, Object> list, int player) {
@@ -43,7 +46,7 @@ void Engine::join_player(const string &name) {
                 throw;
             }
         }
-        players.push_back(Player(name));
+        players.push_back(Player(name, players.size()));
     } else {
         throw;//ERROR
     }

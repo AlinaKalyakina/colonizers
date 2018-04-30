@@ -95,41 +95,15 @@ int Pack<T>::sum() {
     return sum;
 }
 
-
-//template <>
-//struct Pack<ObjectType> {
-//    int card[int(ObjectType::NUMBER)];
-//    Pack(int roads, int towns, int cities);
-//    int& operator[] (ObjectType n);
-//    Pack<ObjectType>& operator- (const Pack<ObjectType>& x);
-//    Pack<ObjectType>& operator-= (const Pack<ObjectType>& x);
-//    Pack<ObjectType>& operator+= (const Pack<ObjectType>& x);
-//    bool operator< (const Pack<ObjectType>& x);
-//    bool operator> (const Pack<ObjectType>& x);
-//    int sum();
-//};
-//template <>
-//struct Pack<Resource> {
-//    int card[int(Resource::NUMBER)];
-//    Pack(int grain, int claim, int ore, int wool, int wood);
-//    int& operator[] (Resource n);
-//    Pack& operator- (const Pack<Resource>& x);
-//    Pack& operator-= (const Pack<Resource>& x);
-//    Pack& operator+= (const Pack<Resource>& x);
-//    bool operator< (const Pack<Resource>& x);
-//    bool operator> (const Pack& x);
-//    int sum();
-//};
-
 struct Player
 {
     long id;
     std::string name;
     Pack<Resource> resource_cards = {0,0,0,0,0};
     Pack<ObjectType> object_cards = Pack<ObjectType>(int(Limits::MAX_ROAD_NUM),
-              int(Limits::MAX_TOWN_NUM), int(Limits::MAX_CITY_NUM));
+              int(Limits::MAX_CITY_NUM), int(Limits::MAX_TOWN_NUM));
     int score = 0;
-    Player(const std::string &name = "");
+    Player(const std::string &name = "", int num = -1);
 };
 
 typedef std::shared_ptr<Player> player_ptr;

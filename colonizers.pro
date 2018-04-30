@@ -13,7 +13,8 @@ HEADERS += \
     include/engine.h \
     include/gamefield.h \
     include/interface.h \
-    include/interface.h
+    include/interface.h \
+    include/errors.h
 
 INCLUDEPATH = ./include/
 

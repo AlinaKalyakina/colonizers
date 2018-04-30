@@ -1,6 +1,6 @@
 #include "gamefield.h"
 
-Player::Player(const std::string &x) : name(x) {}
+Player::Player(const std::string &x, int num) : id(num), name(x) {}
 
 Hex::Hex(coord_t pos, Resource t) : pos(pos), type(t) {}
 
