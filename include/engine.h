@@ -39,6 +39,8 @@ public:
     Engine();
     field_ptr get_field() const;
     std::vector<Player> get_players() const;
+    int get_cur_player() const;
+    GameState get_cur_state() const;
     void set_state(GameState x) {
         state = x;
     }

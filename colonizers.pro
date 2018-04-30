@@ -7,7 +7,8 @@ SOURCES += \
     src/engine.cpp \
     src/gamefield.cpp \
     src/interface.cpp \
-    src/main.cpp
+    src/errors.cpp \
+    src/test_positioning.cpp
 
 HEADERS += \
     include/engine.h \

@@ -5,7 +5,7 @@
 #include <memory>
 #include <vector>
 
-enum class Limits: int {MAGIC_NUM, MAX_NUM_OF_PLAYERS = 4, MAX_RECOURCE_CARD_NUM = 19,
+enum class Limits: int {MAGIC_NUM = 7, MAX_NUM_OF_PLAYERS = 4, MAX_RECOURCE_CARD_NUM = 19,
                                   MAX_TOWN_NUM = 5, MAX_CITY_NUM = 4, MAX_ROAD_NUM = 15};
 
 enum class Resource : int {NUMBER = 5, GRAIN = 0, CLAIM = 1, ORE = 2, WOOL = 3, WOOD = 4, NO_RESOURCE = 6};
@@ -131,12 +131,13 @@ struct GameField {
 
 typedef std::shared_ptr<GameField> field_ptr;
 
-std::set<coord_t> neighbour_hexes(const cross_pos &);
-std::vector<cross_pos> neighbour_crosses(const coord_t &);
-std::vector<cross_pos> neighbour_crosses(const road_pos&);
-std::vector<cross_pos> neighbour_crosses(const cross_pos&);
-std::vector<road_pos> neighbour_roads (const road_pos&);
-std::vector<road_pos> neighbour_roads (const cross_pos&);
-bool belong_field(const cross_pos& cross);
-cross_pos next_cross(const cross_pos&, const road_pos&);
+std::set<coord_t> neighbour_hexes(const cross_pos &) noexcept;
+std::set<cross_pos> neighbour_crosses(const coord_t &) noexcept;
+std::set<cross_pos> neighbour_crosses(const road_pos&) noexcept;
+std::set<cross_pos> neighbour_crosses(const cross_pos&) noexcept;
+std::set<road_pos> neighbour_roads (const road_pos&) noexcept;
+std::set<road_pos> neighbour_roads (const cross_pos&) noexcept;
+bool belong_field(const cross_pos& cross) noexcept;
+bool belong_field(const road_pos &road) noexcept;
+cross_pos next_cross(const cross_pos&, const road_pos&) noexcept;
 #endif // GAMEFIELD_H

@@ -1,6 +1,6 @@
 #include "interface.h"
 #include <iostream>
-
+#include "errors.h"
 
 std::istream& operator>> (std::istream& cin, coord_t &pos) {
     int x, y;
@@ -16,7 +16,7 @@ std::istream& operator>> (std::istream& cin, cross_pos &pos) {
     std::cin >> specific;
     auto it = cross_specific.find(specific);
     if (it == cross_specific.end()) {
-        throw ;
+         "Nonexistent specificator " + specific;
     }
     pos = cross_pos(hex, it->second);
     return cin;
@@ -28,8 +28,8 @@ std::istream& operator>> (std::istream& cin, road_pos &pos) {
     string specific;
     std::cin >> specific;
     auto it = road_specific.find(specific);
-    if (it == road_specific.end()) {
-        throw ;
+    if (it == road_specific.end()) { 
+         "Nonexistent specificator " + specific;
     }
     pos = road_pos(hex, it->second);
     return cin;
@@ -42,7 +42,7 @@ User_cmd Interface::get_cmd() {
     std::cin >> cmd;
     auto it = commands.find(cmd);
     if (it == commands.end()) {
-        throw "!";
+        throw "Nonexistent command " + cmd;
     }
     return it->second;
 }
@@ -56,9 +56,13 @@ void Interface::play() {
             cmd = get_cmd();
             choose_function(cmd);
         }
-        catch (...) {
-
-        };
+        catch (string x) {
+            std::cout << x << std::endl;
+            continue;
+        }
+        catch (Error x) {
+            std::cout << x.what() << std::endl;
+        }
         //CHANGES
         show_field();
     }
@@ -121,7 +125,7 @@ void Interface::choose_function(User_cmd cmd) {
         auto it1 = resource_names.find(res1);
         auto it2 = resource_names.find(res2);
         if (it1 == resource_names.end() || it2 == resource_names.end()) {
-            throw;
+            throw "Nonexistent specificator ";
         }
         engine.exchange_with_field(it1->second, it2->second);
         break;
@@ -226,6 +230,8 @@ std::ostream& operator<< (std::ostream& cout, Player x) {
 }
 
 void Interface::show_field() {
+    std::cout << "ENGINE state: " << std::endl;
+    std::cout << "current player:" << engine.get_cur_player() << std::endl;
     std::cout << "**********FIELD**********" << std::endl << "Hexes:\n";
     for (auto x : field->hexes) {
         std::cout << x << std::endl;
