@@ -44,12 +44,7 @@ bool belong_field(const road_pos &road) noexcept{
 
 bool belong_field(const cross_pos &cross) noexcept{
     auto neigh = neighbour_roads(cross);
-    for (auto x : neigh) {
-        if (belong_field(x)) {
-            return true;
-        }
-    }
-    return false;
+    return !neigh.empty();
 }
 
 std::set<cross_pos> neighbour_crosses(const coord_t & hex) noexcept{

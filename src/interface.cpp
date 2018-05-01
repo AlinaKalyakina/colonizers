@@ -1,19 +1,40 @@
 #include "interface.h"
 #include <iostream>
 #include "errors.h"
+#include <sstream>
 
-std::istream& operator>> (std::istream& cin, coord_t &pos) {
+template<class T>
+T& operator>> (T& cin, coord_t &pos) {
     int x, y;
-    std::cin >> x >> y;
+    cin >> x >> y;
     pos = coord_t(x, y);
     return cin;
 }
 
+std::ostream& operator<< (std::ostream& cout, std::pair<int, Hex> x) {
+    string res;
+    for (auto it : resource_names) {
+        if (x.second.type == it.second) {
+            res = it.first;
+            break;
+        }
+    }
+    std::cout << "Hex #" << x.first << " at pos " << x.second.pos << " with resource: " << res;
+    return cout;
+}
+
+void Interface::show_hexes() {
+    std::cout << "Hexes generated:" << std::endl;
+    for (auto x : field->hexes) {
+        std::cout << x << std::endl;
+    }
+}
+
 std::istream& operator>> (std::istream& cin, cross_pos &pos) {
     coord_t hex;
-    std::cin >> hex;
+    cin >> hex;
     string specific;
-    std::cin >> specific;
+    cin >> specific;
     auto it = cross_specific.find(specific);
     if (it == cross_specific.end()) {
          "Nonexistent specificator " + specific;
@@ -24,15 +45,35 @@ std::istream& operator>> (std::istream& cin, cross_pos &pos) {
 
 std::istream& operator>> (std::istream& cin, road_pos &pos) {
     coord_t hex;
-    std::cin >> hex;
+    cin >> hex;
     string specific;
-    std::cin >> specific;
+    cin >> specific;
     auto it = road_specific.find(specific);
     if (it == road_specific.end()) { 
          "Nonexistent specificator " + specific;
     }
     pos = road_pos(hex, it->second);
     return cin;
+}
+
+
+
+field_ptr create_field() {
+    field_ptr res = std::make_shared<GameField>(GameField());
+    std::istringstream stream(field_code);
+    while (res->hexes.size() != 19) {
+        int num;
+        string str;
+        coord_t coord;
+        stream >> num;
+        stream >> str;
+        stream >> coord;
+        res->hexes.insert(std::make_pair(num, Hex(coord, resource_names.find(str)->second)));
+        if (num == 7) {
+            res->robber_pos = coord;
+        }
+    }
+    return res;
 }
 
 Interface::Interface() : field(engine.get_field()) {}
@@ -49,7 +90,12 @@ User_cmd Interface::get_cmd() {
 
 void Interface::play() {
     while (!end_of_game) {
-        std::cout << introduction << std::endl;
+        std::cout << introduction;
+        if (curplayer.id != -1) {
+            std::cout << ", " + curplayer.name << std::endl;
+        } else {
+            std::cout << std::endl;
+        }
         //CHANGES
         try {
             User_cmd cmd;
@@ -78,6 +124,12 @@ void Interface::choose_function(User_cmd cmd) {
         break;
     case User_cmd::START:
         engine.start_game();
+        show_hexes();
+        break;
+    case User_cmd::SET_FIELD:
+        engine.start_game(create_field());
+        field = engine.get_field();
+        show_hexes();
         break;
     case User_cmd::PUT_INFRASTR: {
         road_pos road;
@@ -88,6 +140,15 @@ void Interface::choose_function(User_cmd cmd) {
         break;
     case User_cmd::MAKE_DICE:
         engine.make_dice();
+        break;
+    case User_cmd::SET_DICE: {
+        int n;
+        std::cin >> n;
+        if (n < 2 || n > 12) {
+            throw "Choose between 2 and 12";
+        }
+        engine.make_dice(n);
+        }
         break;
     case User_cmd::MOVE_ROBBER: {
         coord_t pos;
@@ -167,18 +228,6 @@ std::ostream& operator<< (std::ostream& cout, cross_pos x) {
     return cout;
 }
 
-std::ostream& operator<< (std::ostream& cout, std::pair<int, Hex> x) {
-    string res;
-    for (auto it : resource_names) {
-        if (x.second.type == it.second) {
-            res = it.first;
-            break;
-        }
-    }
-    std::cout << "Hex #" << x.first << " at pos " << x.second.pos << " with resource: " << res;
-    return cout;
-}
-
 std::ostream& operator<< (std::ostream& cout, std::pair<road_pos, Object> x) {
     std::cout << "At pos " << x.first << ", owner: " << x.second.owner;
     return cout;
@@ -224,18 +273,13 @@ std::ostream& operator<< (std::ostream& cout, Pack<ObjectType> x) {
 
 std::ostream& operator<< (std::ostream& cout, Player x) {
     std::cout << "Player #" << x.id << ", name: " << x.name << ", score: " <<
-                 x.score << std::endl << "Resourses:" << std::endl << x.resource_cards << std::endl <<
-                 "Rest object cards:" << std::endl << x.object_cards;
+                 x.score << std::endl << "Resourses: " << x.resource_cards << std::endl <<
+                 "Rest object cards: "<< x.object_cards;
     return cout;
 }
 
 void Interface::show_field() {
-    std::cout << "ENGINE state: " << std::endl;
-    std::cout << "current player:" << engine.get_cur_player() << std::endl;
-    std::cout << "**********FIELD**********" << std::endl << "Hexes:\n";
-    for (auto x : field->hexes) {
-        std::cout << x << std::endl;
-    }
+    std::cout << "**********FIELD**********" << std::endl;
     std::cout << "Roads:\n";
     for (auto x : field->roads) {
         std::cout << x << std::endl;
@@ -244,9 +288,9 @@ void Interface::show_field() {
     for (auto x : field->settlements) {
         std::cout << x << std::endl;
     }
-    std::cout << "Bank:" << std::endl << field->bank << std::endl;
-    std::cout << "Dice score:" << std::endl << field->dice_score << std::endl;
-    std::cout << "Robber_pos:" << std::endl << field->robber_pos << std::endl;
+    std::cout << "Bank: " << field->bank << std::endl;
+    std::cout << "Dice score: " << field->dice_score << std::endl;
+    std::cout << "Robber_pos: " << field->robber_pos << std::endl;
     std::cout << "**********PLAYERS**********" << std::endl;
     auto players = engine.get_players();
     for (auto x : players) {

@@ -24,9 +24,9 @@ class Engine
     bool drop_resource(Player&);
 public:
     void join_player(const string &player_name);
-    void start_game();
+    void start_game(field_ptr x = nullptr);
     void put_initial_infrastructure(cross_pos, road_pos);
-    void make_dice();
+    void make_dice(int score = 0);
     void move_robber(const coord_t &pos);
     bool rob(const string &name);
     void exchange_with_field(Resource player_resourse,
@@ -41,9 +41,6 @@ public:
     std::vector<Player> get_players() const;
     int get_cur_player() const;
     GameState get_cur_state() const;
-    void set_state(GameState x) {
-        state = x;
-    }
     void insert_player() {
         players.push_back(Player());
     }

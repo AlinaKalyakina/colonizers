@@ -67,7 +67,7 @@ coord_t gen_coord() {
     return coord_t(x, y);
 }
 
-void Engine::start_game() {
+void Engine::start_game(field_ptr x) {
     if (state != GameState::PLAYERS_REGISTRATION) {
         throw Error(Error_code::PROHIBITED_COMMAND);
     }
@@ -75,6 +75,12 @@ void Engine::start_game() {
         throw Error(Error_code::NO_PLAYERS);
     }
     std::srand(std::time(nullptr));
+    if (x) {
+        field = x;
+        state = GameState::PUT_INITIAL_INFRASTRUCTURES_DIRECT;
+        player_num = 0;
+        return;
+    }
     int numbers[11] = {1, 2, 2, 2, 2, 0, 2, 2, 2, 2, 1};
     int res[5] = {3, 3, 3, 3, 3};
     auto coord = gen_coord();//Desert
@@ -110,32 +116,28 @@ void Engine::put_initial_infrastructure(cross_pos cross, road_pos road) {
             state != GameState::PUT_INITIAL_INFRASTRUCTURES_DIRECT) {
         throw Error(Error_code::PROHIBITED_COMMAND);
     }
-    if (state == GameState::PUT_INITIAL_INFRASTRUCTURES_DIRECT) {
-        if (field->roads.count(road)) {
+    if (field->roads.count(road)) {
             throw Error(Error_code::OBJ_EXISTS);
         }
-        field->roads.insert(std::make_pair(road_pos(road), Object(player_num)));
-        players[player_num].object_cards[ObjectType::ROAD]--;
-        try {
-            register_town(cross);
-        }
-        catch (...) {
-            undo_obj_registration(road);
-            throw Error(Error_code::CONDITIONS_ERROR);
-        }
+    if (!belong_field(road)) {
+        throw Error(Error_code::CONDITIONS_ERROR);
+    }
+    field->roads.insert(std::make_pair(road_pos(road), Object(player_num)));
+    players[player_num].object_cards[ObjectType::ROAD]--;
+    try {
+        register_town(cross);
+    }
+    catch (...) {
+        undo_obj_registration(road);
+        throw Error(Error_code::CONDITIONS_ERROR);
+    }
+    if (state == GameState::PUT_INITIAL_INFRASTRUCTURES_DIRECT) {
         if (player_num == players.size() - 1) {
             state = GameState::PUT_INITIAL_INFRASTRUCTURE_REVERCE;
         } else {
             player_num++;
         }
     } else {
-        register_road(road);
-        try {
-            register_town(cross);
-        } catch (...) {
-            undo_obj_registration(road);
-            throw Error(Error_code::CONDITIONS_ERROR);
-        }
         get_init_resource(cross);
         if (player_num == 0) {
             state = GameState::STAGE1_DICE;
@@ -196,19 +198,25 @@ void Engine::get_resources() {
             }
             auto settle_it = field->settlements.find(pos);
             if (settle_it->second.type == ObjectType::TOWN) {
-                players[settle_it->second.owner].resource_cards[hex.type] += 1;
+                players[settle_it->second.owner].resource_cards[hex.type]++;
+                field->bank[hex.type]--;
             } else { //CITY
                players[settle_it->second.owner].resource_cards[hex.type] += 2;
+               field->bank[hex.type] -= 2;
             }
         }
+        range.first++;
     }
 }
 
-void Engine::make_dice() {
+void Engine::make_dice(int score) {
     if (state != GameState::STAGE1_DICE) {
         throw Error(Error_code::PROHIBITED_COMMAND);
     }
     field->dice_score = rand() % 6 + 2 + rand() % 6;
+    if (score != 0) {
+        field->dice_score = score;
+    }
     if (field->dice_score == int(Limits::MAGIC_NUM)) {
         for (auto x : players) {
             drop_resource(x);
