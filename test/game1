@@ -1,0 +1,141 @@
+start
+reg alina
+reg kate
+reg kate
+reg max 
+put_inf -1 1 u -1 1 b
+dice
+set_field
+
+put_inf -1 1 u -1 1 b
+put_inf -1 1 u -1 1 t
+put_inf -1 1 u -1 2 t
+put_inf -1 -1 u -1 -1 t
+put_inf 0 -2 u 0 -1 b
+
+put_inf 3 5 d 3 5 b
+put_inf 1 0 d 1 0 b
+put_inf 1 -1 d 1 -1 b
+put_inf -1 1 d -1 1 b
+
+set_dice 5
+exchange wood grain
+end_exchange
+next
+
+set_dice 8
+end_exchange
+build_road -2 0 d
+next
+
+set_dice 10
+end_exchange
+build_road 0 1 u
+build_road 1 0 r
+build_town 1 1 b
+next
+
+end_exchange
+set_dice 12
+end_exchange
+next
+
+set_dice 6
+exchange claim wood
+exchange ore wool
+build_road 1 -1 d
+build_town 1 -1 t
+end_exchange
+build_road 1 0 r
+end_exchanges
+next
+
+set_dice 6
+end_exchange
+exchange ore wool
+build_city 0 -2 t
+build_city 1 0 b
+next
+
+set_dice 9
+exchange wood wool
+end_exchange
+build_road 0 0 u
+next
+
+start
+
+set_dice 7
+build_city -1 -1 t
+move_robber 1 -1
+rob alina
+set_rob max claim
+exchange grain wood
+end_exchange
+build_town -1 1 t
+build_road 3 4 u
+build_road 2 -2 u
+build_town 2 -2 t
+build_city 1 -1 b
+build_town 2 -1 b
+next
+
+set_dice 11
+next
+end_exchange
+next
+
+set_dice 6
+end_exchange
+build_town 0 1 b
+next
+
+set_dice 3
+exchange wood grain
+end_exchange
+build_city 1 -1 b
+next
+
+set_dice 8
+exchange wood ore
+end_exchange
+build_city 1 0 b
+build_city 0 -1 b
+next
+
+set_dice 10
+end_exchange
+next
+
+set_dice 6
+end_exchange
+next
+
+set_dice 5
+end_exchange 
+next 
+
+set_dice 7
+move_robber 1 -1
+move_robber -2 1
+rob max
+end_exchange
+next
+
+set_dice 8
+end_exchange
+next
+
+set_dice 3
+end_exchange
+next
+
+set_dice 6
+end_exchange
+next
+
+set_dice 11
+end_exchange
+build_city -1 -1 t
+next 
+

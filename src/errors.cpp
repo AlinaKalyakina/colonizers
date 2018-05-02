@@ -24,5 +24,7 @@ std::string Error::what() {
         return "You can't do this at the moment";
     case Error_code::TOO_MANY_PLAYERS:
         return "Attempt to exceed the maximum number of players";
+    case Error_code::MUST_MOVE:
+        return "You must move robber somewhere";
     }
 }

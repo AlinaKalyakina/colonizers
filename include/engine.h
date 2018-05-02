@@ -28,7 +28,7 @@ public:
     void put_initial_infrastructure(cross_pos, road_pos);
     void make_dice(int score = 0);
     void move_robber(const coord_t &pos);
-    bool rob(const string &name);
+    bool rob(const std::string name, Resource rob = Resource::NO_RESOURCE);
     void exchange_with_field(Resource player_resourse,
                              Resource bank_resource);
     void end_exchanges();
@@ -39,10 +39,13 @@ public:
     Engine();
     field_ptr get_field() const;
     std::vector<Player> get_players() const;
-    int get_cur_player() const;
+    Player get_cur_player() const;
     GameState get_cur_state() const;
     void insert_player() {
         players.push_back(Player());
+    }
+    void set_state(GameState x) {
+        state = x;
     }
 };
 

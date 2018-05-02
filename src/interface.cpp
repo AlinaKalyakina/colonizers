@@ -110,8 +110,10 @@ void Interface::play() {
             std::cout << x.what() << std::endl;
         }
         //CHANGES
+        curplayer = engine.get_cur_player();
         show_field();
     }
+    std::cout << curplayer.name << " won!!!" << std::endl;
 }
 
 void Interface::choose_function(User_cmd cmd) {
@@ -162,6 +164,17 @@ void Interface::choose_function(User_cmd cmd) {
         engine.rob(name);
         }
         break;
+    case User_cmd::SET_ROB: {
+        string name, res;
+        std::cin >> name;
+        std::cin >> res;
+        auto it = resource_names.find(res);
+        if (it == resource_names.end()) {
+            throw "Bad command!";
+        }
+        engine.rob(name, it->second);
+        }
+        break;
     case User_cmd::BUILD_ROAD: {
         road_pos pos;
         std::cin >> pos;
@@ -196,6 +209,9 @@ void Interface::choose_function(User_cmd cmd) {
         break;
     case User_cmd::NEXT_PLAYER:
         end_of_game = !engine.next_player();
+        break;
+    case User_cmd::EXIT:
+        exit(0);
     }
 }
 

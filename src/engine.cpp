@@ -13,8 +13,11 @@ std::vector<Player> Engine::get_players() const {
     return players;
 }
 
-int Engine::get_cur_player() const {
-    return player_num;
+Player Engine::get_cur_player() const {
+    if (player_num == -1) {
+        return Player();
+    }
+    return players[player_num];
 }
 GameState Engine::get_cur_state() const {
     return state;
@@ -154,6 +157,9 @@ void Engine::register_road(const road_pos &road) {
     if (players[player_num].object_cards[ObjectType::ROAD] == 0) {
         throw Error(Error_code::NOT_ENOUGH_OBJECTS); //ERROR
     }
+    if (!belong_field(road)) {
+        throw Error(Error_code::CONDITIONS_ERROR);
+    }
     if (check_owner(neighbour_roads(road), field->roads, player_num) ||
             check_owner(neighbour_crosses(road), field->settlements, player_num)) {
         field->roads.insert(std::make_pair(road, Object(player_num)));
@@ -191,21 +197,25 @@ void Engine::get_resources() {
     auto range = field->hexes.equal_range(field->dice_score);
     while (range.first != range.second) {
         auto hex = range.first->second;
+        range.first++;
+        if (hex.pos == field->robber_pos) {
+            continue;
+        }
         auto crosses_coord = neighbour_crosses(hex.pos);
         for (auto pos : crosses_coord) {
             if (!field->settlements.count(pos)) {
                 continue;
             }
             auto settle_it = field->settlements.find(pos);
-            if (settle_it->second.type == ObjectType::TOWN) {
+            if (field->bank[hex.type] > 0) {
                 players[settle_it->second.owner].resource_cards[hex.type]++;
                 field->bank[hex.type]--;
-            } else { //CITY
-               players[settle_it->second.owner].resource_cards[hex.type] += 2;
-               field->bank[hex.type] -= 2;
+            }
+            if (settle_it->second.type == ObjectType::CITY && field->bank[hex.type] > 0) {
+                players[settle_it->second.owner].resource_cards[hex.type]++;
+                field->bank[hex.type]--;
             }
         }
-        range.first++;
     }
 }
 
@@ -242,14 +252,18 @@ bool Engine::drop_resource(Player &player) {
 }
 
 void Engine::move_robber(const coord_t &pos) {
+
+    if (pos == field->robber_pos) {
+        throw Error(Error_code::MUST_MOVE);
+    }
     field->robber_pos = pos;
     auto crosses = neighbour_crosses(pos);
     for (auto it = crosses.begin(); it != crosses.end();) {
-       if (!field->settlements.count(*it)) {
-                it++;
-            } else {
-                crosses.erase(it);
-            }
+       if (field->settlements.count(*it)) {
+          it++;
+       } else {
+            it = crosses.erase(it);
+       }
     }
     if (crosses.empty()) { //none to be robbed
         state = GameState::STAGE2;
@@ -258,7 +272,7 @@ void Engine::move_robber(const coord_t &pos) {
     state = GameState::STAGE1_ROBBING;
 }
 
-bool Engine::rob(const string &robbed) {
+bool Engine::rob(const string robbed, Resource rob) {
     if (state != GameState::STAGE1_ROBBING) {
         throw Error(Error_code::PROHIBITED_COMMAND);
     }
@@ -271,10 +285,14 @@ bool Engine::rob(const string &robbed) {
         if (players[x].name == robbed) {
             if (players[x].resource_cards.sum() != 0) {
                 while (true) {
-                    int res = rand() % 5;
-                    if (players[x].resource_cards[Resource(res)] != 0) {
-                        players[x].resource_cards[Resource(res)]--;
-                        players[player_num].resource_cards[Resource(res)]++;
+                    Resource res = Resource(rand() % 5);
+                    if (rob != Resource::NO_RESOURCE) {
+                        res = rob;
+                    }
+                    if (players[x].resource_cards[res] != 0) {
+                        players[x].resource_cards[res]--;
+                        players[player_num].resource_cards[res]++;
+                        break;
                     }
                 }
             } else {
@@ -291,15 +309,15 @@ void Engine::exchange_with_field(Resource player_resourse, Resource bank_resourc
     if (state != GameState::STAGE2) {
         throw Error(Error_code::PROHIBITED_COMMAND);
     }
-    if (players[player_num].resource_cards[player_resourse] < 4) {
+    if (players[player_num].resource_cards[player_resourse] < int(Limits::EXCHANGE_RATE)) {
         throw Error(Error_code::NOT_ENOUGH_PLAYER_RESOURCE); //ERROR
     }
     if (field->bank[bank_resource] < 1) {
         throw Error(Error_code::NOT_ENOUGH_BANK_RESOURCE); //ERROR
     }
-    field->bank[player_resourse] += 4;
+    field->bank[player_resourse] += int(Limits::EXCHANGE_RATE);
     field->bank[bank_resource]--;
-    players[player_num].resource_cards[player_resourse] -= 4;
+    players[player_num].resource_cards[player_resourse] -= int(Limits::EXCHANGE_RATE);
     players[player_num].resource_cards[bank_resource]++;
 }
 
@@ -314,7 +332,7 @@ void Engine::build_road(road_pos pos) {
     if (state != GameState::STAGE3) {
         throw Error(Error_code::PROHIBITED_COMMAND);
     }
-    if (players[player_num].resource_cards < road_request) {
+    if (!(players[player_num].resource_cards >= road_request)) {
         throw Error(Error_code::NOT_ENOUGH_PLAYER_RESOURCE);//ERROR
     }
     register_road(pos);
@@ -324,9 +342,9 @@ void Engine::build_road(road_pos pos) {
 
 void Engine::build_town(cross_pos pos) {
     if (state != GameState::STAGE3) {
-        throw ;
+        throw Error(Error_code::PROHIBITED_COMMAND);
     }
-    if (players[player_num].resource_cards < town_request) {
+    if (!(players[player_num].resource_cards >= town_request)) {
         throw Error(Error_code::NOT_ENOUGH_PLAYER_RESOURCE);//ERROR
     }
     register_town(pos);
@@ -338,7 +356,7 @@ void Engine::build_city(cross_pos pos) {
     if (state != GameState::STAGE3) {
         throw Error(Error_code::PROHIBITED_COMMAND);
     }
-    if (players[player_num].resource_cards < city_request) {
+    if (!(players[player_num].resource_cards >= city_request)) {
         throw Error(Error_code::NOT_ENOUGH_PLAYER_RESOURCE);//ERROR
     }
     auto it = field->settlements.find(pos);
@@ -358,11 +376,12 @@ bool Engine::next_player() {
     if (state != GameState::STAGE3) {
         throw Error(Error_code::PROHIBITED_COMMAND);
     }
-    if (players[player_num].score >= 10) {
+    if (players[player_num].score >= int(Limits::WIN_SCORE)) {
         state = GameState::FINAL;
         return false;
     }
     player_num = (player_num + 1) % players.size();
+    state = GameState::STAGE1_DICE;
     return true;
 }
 

@@ -8,13 +8,13 @@
 using std::string;
 enum class User_cmd{REG_PLAYER, START, PUT_INFRASTR, MAKE_DICE, MOVE_ROBBER, ROB,
                     BUILD_ROAD, BUILD_TOWN, BUILD_CITY, EXCHANGE_RES, END_EXCHANGE,
-                   NEXT_PLAYER, SET_FIELD, SET_DICE};
+                   NEXT_PLAYER, SET_FIELD, SET_DICE, SET_ROB, EXIT};
 const std::map<string, User_cmd> commands =
 {{"reg", User_cmd::REG_PLAYER}, {"start", User_cmd::START}, {"set_field", User_cmd::SET_FIELD},
  {"put_inf", User_cmd::PUT_INFRASTR}, {"dice", User_cmd::MAKE_DICE}, {"set_dice", User_cmd::SET_DICE},
  {"move_robber", User_cmd::MOVE_ROBBER}, {"rob", User_cmd::ROB}, {"build_road", User_cmd::BUILD_ROAD},
- {"build_city", User_cmd::BUILD_ROAD}, {"build_town", User_cmd::BUILD_TOWN}, {"exchange", User_cmd::EXCHANGE_RES},
- {"end_exchange", User_cmd::END_EXCHANGE}, {"next", User_cmd::NEXT_PLAYER}};
+ {"build_city", User_cmd::BUILD_CITY}, {"build_town", User_cmd::BUILD_TOWN}, {"exchange", User_cmd::EXCHANGE_RES},
+ {"end_exchange", User_cmd::END_EXCHANGE}, {"next", User_cmd::NEXT_PLAYER}, {"set_rob", User_cmd::SET_ROB}, {"exit", User_cmd::EXIT}};
 
 const std::map<string, CrossCoord> cross_specific =
 {{"t",CrossCoord::TOP}, {"b", CrossCoord::BOTTOM}};
