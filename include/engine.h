@@ -40,7 +40,6 @@ public:
     field_ptr get_field() const;
     std::vector<Player> get_players() const;
     Player get_cur_player() const;
-    GameState get_cur_state() const;
     void insert_player() {
         players.push_back(Player());
     }

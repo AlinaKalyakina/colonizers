@@ -19,9 +19,6 @@ Player Engine::get_cur_player() const {
     }
     return players[player_num];
 }
-GameState Engine::get_cur_state() const {
-    return state;
-}
 
 template<class T>
 bool check_owner(const std::set<T> positions, const std::map<T, Object> list, int player) {
@@ -228,7 +225,7 @@ void Engine::make_dice(int score) {
         field->dice_score = score;
     }
     if (field->dice_score == int(Limits::MAGIC_NUM)) {
-        for (auto x : players) {
+        for (auto &x : players) {
             drop_resource(x);
         }
     } else {

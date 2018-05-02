@@ -106,6 +106,10 @@ void Interface::play() {
             std::cout << x << std::endl;
             continue;
         }
+        catch (const char * x) {
+            std::cout << x;
+            continue;
+        }
         catch (Error x) {
             std::cout << x.what() << std::endl;
         }
@@ -147,7 +151,7 @@ void Interface::choose_function(User_cmd cmd) {
         int n;
         std::cin >> n;
         if (n < 2 || n > 12) {
-            throw "Choose between 2 and 12";
+            throw "Choose between 2 and 12\n";
         }
         engine.make_dice(n);
         }

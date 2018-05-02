@@ -54,5 +54,6 @@ public:
 std::ostream& operator<< (std::ostream& cout, cross_pos x);
 std::ostream& operator<< (std::ostream& cout, coord_t x);
 std::ostream& operator<< (std::ostream& cout, road_pos x);
+field_ptr create_field();
 
 #endif // INTERFACE_H

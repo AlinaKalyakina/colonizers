@@ -136,6 +136,7 @@ next
 
 set_dice 11
 end_exchange
+build_city 0 1 t
 build_city -1 -1 t
 next 
 

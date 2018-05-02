@@ -1,0 +1,1583 @@
+WRITE COMMAND
+**********FIELD**********
+Roads:
+Settlements:
+Bank: grain:19     claim:19     ore:19     wool:19     wood:19     
+Dice score: 0
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 0
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 15     city: 3     town: 4     
+WRITE COMMAND
+**********FIELD**********
+Roads:
+Settlements:
+Bank: grain:19     claim:19     ore:19     wool:19     wood:19     
+Dice score: 0
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 0
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 15     city: 3     town: 4     
+Player #1, name: kate, score: 0
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 15     city: 3     town: 4     
+WRITE COMMAND
+**********FIELD**********
+Roads:
+Settlements:
+Bank: grain:19     claim:19     ore:19     wool:19     wood:19     
+Dice score: 0
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 0
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 15     city: 3     town: 4     
+Player #1, name: kate, score: 0
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 15     city: 3     town: 4     
+Player #2, name: max, score: 0
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 15     city: 3     town: 4     
+WRITE COMMAND
+**********FIELD**********
+Roads:
+Settlements:
+Bank: grain:19     claim:19     ore:19     wool:19     wood:19     
+Dice score: 0
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 0
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 15     city: 3     town: 4     
+Player #1, name: kate, score: 0
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 15     city: 3     town: 4     
+Player #2, name: max, score: 0
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 15     city: 3     town: 4     
+Player #3, name: sam, score: 0
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 15     city: 3     town: 4     
+WRITE COMMAND
+Attempt to exceed the maximum number of players
+**********FIELD**********
+Roads:
+Settlements:
+Bank: grain:19     claim:19     ore:19     wool:19     wood:19     
+Dice score: 0
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 0
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 15     city: 3     town: 4     
+Player #1, name: kate, score: 0
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 15     city: 3     town: 4     
+Player #2, name: max, score: 0
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 15     city: 3     town: 4     
+Player #3, name: sam, score: 0
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 15     city: 3     town: 4     
+WRITE COMMAND
+Nonexistent command set
+WRITE COMMAND
+Hexes generated:
+Hex #2 at pos (-2,1) with resource: claim
+Hex #3 at pos (-1,-1) with resource: wood
+Hex #3 at pos (0,-2) with resource: grain
+Hex #4 at pos (-2,2) with resource: grain
+Hex #4 at pos (1,1) with resource: wool
+Hex #5 at pos (-1,1) with resource: wood
+Hex #5 at pos (0,-1) with resource: ore
+Hex #6 at pos (-1,2) with resource: wood
+Hex #6 at pos (1,-2) with resource: grain
+Hex #7 at pos (0,0) with resource: desert
+Hex #8 at pos (1,0) with resource: ore
+Hex #8 at pos (-1,0) with resource: claim
+Hex #9 at pos (0,2) with resource: grain
+Hex #9 at pos (-2,0) with resource: wool
+Hex #10 at pos (2,0) with resource: wool
+Hex #10 at pos (1,-1) with resource: claim
+Hex #11 at pos (2,-1) with resource: wood
+Hex #11 at pos (2,-2) with resource: ore
+Hex #12 at pos (0,1) with resource: wool
+**********FIELD**********
+Roads:
+Settlements:
+Bank: grain:19     claim:19     ore:19     wool:19     wood:19     
+Dice score: 0
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 0
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 15     city: 3     town: 4     
+Player #1, name: kate, score: 0
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 15     city: 3     town: 4     
+Player #2, name: max, score: 0
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 15     city: 3     town: 4     
+Player #3, name: sam, score: 0
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 15     city: 3     town: 4     
+WRITE COMMAND, alina
+**********FIELD**********
+Roads:
+At pos (-1,1) u, owner: 0
+Settlements:
+At pos (-1,1) t, owner: 0, type: town
+Bank: grain:19     claim:19     ore:19     wool:19     wood:19     
+Dice score: 0
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 1
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 14     city: 3     town: 3     
+Player #1, name: kate, score: 0
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 15     city: 3     town: 4     
+Player #2, name: max, score: 0
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 15     city: 3     town: 4     
+Player #3, name: sam, score: 0
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 15     city: 3     town: 4     
+WRITE COMMAND, kate
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+Bank: grain:19     claim:19     ore:19     wool:19     wood:19     
+Dice score: 0
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 1
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 14     city: 3     town: 3     
+Player #1, name: kate, score: 1
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 14     city: 3     town: 3     
+Player #2, name: max, score: 0
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 15     city: 3     town: 4     
+Player #3, name: sam, score: 0
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 15     city: 3     town: 4     
+WRITE COMMAND, max
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (0,-2) u, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (0,-1) b, owner: 2, type: town
+Bank: grain:19     claim:19     ore:19     wool:19     wood:19     
+Dice score: 0
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 1
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 14     city: 3     town: 3     
+Player #1, name: kate, score: 1
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 14     city: 3     town: 3     
+Player #2, name: max, score: 1
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 14     city: 3     town: 3     
+Player #3, name: sam, score: 0
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 15     city: 3     town: 4     
+WRITE COMMAND, sam
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+Bank: grain:19     claim:19     ore:19     wool:19     wood:19     
+Dice score: 0
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 1
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 14     city: 3     town: 3     
+Player #1, name: kate, score: 1
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 14     city: 3     town: 3     
+Player #2, name: max, score: 1
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 14     city: 3     town: 3     
+Player #3, name: sam, score: 1
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 14     city: 3     town: 3     
+WRITE COMMAND, sam
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:18     claim:19     ore:19     wool:18     wood:19     
+Dice score: 0
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 1
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 14     city: 3     town: 3     
+Player #1, name: kate, score: 1
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 14     city: 3     town: 3     
+Player #2, name: max, score: 1
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 14     city: 3     town: 3     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, max
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:18     claim:18     ore:18     wool:18     wood:18     
+Dice score: 0
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 1
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 14     city: 3     town: 3     
+Player #1, name: kate, score: 1
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 14     city: 3     town: 3     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:1     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, kate
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:17     ore:17     wool:18     wood:18     
+Dice score: 0
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 1
+Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
+Rest object cards: road: 14     city: 3     town: 3     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:1     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, alina
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:17     wool:18     wood:17     
+Dice score: 0
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:1     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, alina
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:16     wool:18     wood:15     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:3     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:2     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, alina
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:16     wool:18     wood:15     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:3     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:2     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, alina
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:16     wool:18     wood:15     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:3     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:2     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, kate
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:15     wool:18     wood:13     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:5     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:3     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, kate
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:15     wool:18     wood:13     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:5     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:3     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, kate
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:15     wool:18     wood:13     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:5     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:3     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, max
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:14     wool:18     wood:11     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:7     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:4     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, max
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:14     wool:18     wood:11     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:7     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:4     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, max
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:14     wool:18     wood:11     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:7     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:4     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, sam
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:13     wool:18     wood:9     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:9     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:5     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, sam
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:13     wool:18     wood:9     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:9     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:5     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, sam
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:13     wool:18     wood:9     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:9     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:5     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, alina
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:12     wool:18     wood:7     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:11     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:6     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, alina
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:12     wool:18     wood:7     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:11     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:6     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, alina
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:12     wool:18     wood:7     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:11     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:6     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, kate
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:11     wool:18     wood:5     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:13     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:7     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, kate
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:11     wool:18     wood:5     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:13     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:7     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, kate
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:11     wool:18     wood:5     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:13     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:7     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, max
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:10     wool:18     wood:3     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:15     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:8     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, max
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:10     wool:18     wood:3     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:15     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:8     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, max
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:10     wool:18     wood:3     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:15     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:8     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, sam
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:9     wool:18     wood:1     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:17     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:9     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, sam
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:9     wool:18     wood:1     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:17     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:9     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, sam
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:9     wool:18     wood:1     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:17     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:9     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, alina
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:8     wool:18     wood:0     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:18     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:10     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, alina
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:8     wool:18     wood:0     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:18     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:10     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, alina
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:8     wool:18     wood:0     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:18     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:10     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, kate
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:7     wool:18     wood:0     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:18     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:11     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, kate
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:7     wool:18     wood:0     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:18     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:11     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, kate
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:7     wool:18     wood:0     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:18     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:11     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, max
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:6     wool:18     wood:0     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:18     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:12     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, max
+There's no enough resources in bank to make exchange
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:6     wool:18     wood:0     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:18     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:12     wool:0     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, max
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:8     wool:17     wood:0     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:18     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:10     wool:1     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, max
+**********FIELD**********
+Roads:
+At pos (-1,-1) u, owner: 1
+At pos (-1,1) u, owner: 0
+At pos (-1,1) d, owner: 0
+At pos (-1,2) r, owner: 3
+At pos (0,-2) u, owner: 2
+At pos (0,2) d, owner: 3
+At pos (1,-1) d, owner: 1
+At pos (1,0) d, owner: 2
+Settlements:
+At pos (-1,-1) t, owner: 1, type: town
+At pos (-1,1) t, owner: 0, type: town
+At pos (-1,1) b, owner: 0, type: town
+At pos (-1,3) b, owner: 3, type: town
+At pos (0,-1) b, owner: 2, type: town
+At pos (1,-1) b, owner: 1, type: town
+At pos (1,0) b, owner: 2, type: town
+At pos (1,1) t, owner: 3, type: town
+Bank: grain:17     claim:16     ore:10     wool:16     wood:0     
+Dice score: 5
+Robber_pos: (0,0)
+**********PLAYERS**********
+Player #0, name: alina, score: 2
+Resourses: grain:0     claim:1     ore:0     wool:0     wood:18     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #1, name: kate, score: 2
+Resourses: grain:1     claim:1     ore:1     wool:0     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #2, name: max, score: 2
+Resourses: grain:0     claim:1     ore:8     wool:2     wood:1     
+Rest object cards: road: 13     city: 3     town: 2     
+Player #3, name: sam, score: 2
+Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
+Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, max

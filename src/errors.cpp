@@ -9,7 +9,7 @@ std::string Error::what() {
     case Error_code::CONDITIONS_ERROR:
         return "You can't built this object there";
     case Error_code::NOT_ENOUGH_BANK_RESOURCE:
-        return "There's no enougn resources in bank to make exchange";
+        return "There's no enough resources in bank to make exchange";
     case Error_code::NOT_ENOUGH_OBJECTS:
         return "You don't have any object cards of this type";
     case Error_code::NOT_ENOUGH_PLAYER_RESOURCE:
