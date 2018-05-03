@@ -276,7 +276,9 @@ bool Engine::rob(const string robbed, Resource rob) {
     std::set<int> can_be_robbed;
     auto crosses = neighbour_crosses(field->robber_pos);
     for (auto x : crosses) {
-        can_be_robbed.insert(field->settlements.find(x)->second.owner);
+        if (field->settlements.count(x)) {
+            can_be_robbed.insert(field->settlements.find(x)->second.owner);
+        }
     }
     for (auto x : can_be_robbed) {
         if (players[x].name == robbed) {
@@ -352,6 +354,9 @@ void Engine::build_town(cross_pos pos) {
 void Engine::build_city(cross_pos pos) {
     if (state != GameState::STAGE3) {
         throw Error(Error_code::PROHIBITED_COMMAND);
+    }
+    if (players[player_num].object_cards[ObjectType::CITY] == 0) {
+        throw Error(Error_code::NOT_ENOUGH_OBJECTS);
     }
     if (!(players[player_num].resource_cards >= city_request)) {
         throw Error(Error_code::NOT_ENOUGH_PLAYER_RESOURCE);//ERROR

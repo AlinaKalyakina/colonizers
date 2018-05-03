@@ -7,6 +7,8 @@ reg alex
 set
 set_field
 
+put_inf -1 1 t
+put_inf 0 0 r 0 0 r
 put_inf -1 1 u -1 1 t
 put_inf -1 -1 u -1 -1 t
 put_inf 0 -2 u 0 -1 b
@@ -17,6 +19,7 @@ put_inf 1 0 d 1 0 b
 put_inf 1 -1 d 1 -1 b
 put_inf -1 1 d -1 1 b
 
+set_dice 15
 set_dice 5
 end_exchange
 next

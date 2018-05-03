@@ -37,7 +37,7 @@ std::istream& operator>> (std::istream& cin, cross_pos &pos) {
     cin >> specific;
     auto it = cross_specific.find(specific);
     if (it == cross_specific.end()) {
-         "Nonexistent specificator " + specific;
+        throw  "Nonexistent specificator " + specific;
     }
     pos = cross_pos(hex, it->second);
     return cin;
@@ -50,7 +50,7 @@ std::istream& operator>> (std::istream& cin, road_pos &pos) {
     cin >> specific;
     auto it = road_specific.find(specific);
     if (it == road_specific.end()) { 
-         "Nonexistent specificator " + specific;
+         throw "Nonexistent specificator " + specific;
     }
     pos = road_pos(hex, it->second);
     return cin;
@@ -107,7 +107,7 @@ void Interface::play() {
             continue;
         }
         catch (const char * x) {
-            std::cout << x;
+            std::cout << x << std::endl;
             continue;
         }
         catch (Error x) {
@@ -151,7 +151,7 @@ void Interface::choose_function(User_cmd cmd) {
         int n;
         std::cin >> n;
         if (n < 2 || n > 12) {
-            throw "Choose between 2 and 12\n";
+            throw "Choose between 2 and 12";
         }
         engine.make_dice(n);
         }

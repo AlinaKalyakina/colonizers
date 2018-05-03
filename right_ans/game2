@@ -124,6 +124,10 @@ Player #3, name: sam, score: 0
 Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
 Rest object cards: road: 15     city: 3     town: 4     
 WRITE COMMAND, alina
+Nonexistent specificator t
+WRITE COMMAND, alina
+Nonexistent specificator r
+WRITE COMMAND, alina
 **********FIELD**********
 Roads:
 At pos (-1,1) u, owner: 0
@@ -355,6 +359,8 @@ Rest object cards: road: 13     city: 3     town: 2
 Player #3, name: sam, score: 2
 Resourses: grain:1     claim:0     ore:0     wool:1     wood:0     
 Rest object cards: road: 13     city: 3     town: 2     
+WRITE COMMAND, alina
+Choose between 2 and 12
 WRITE COMMAND, alina
 **********FIELD**********
 Roads:

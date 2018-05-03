@@ -1615,6 +1615,8 @@ Player #2, name: max, score: 3
 Resourses: grain:0     claim:1     ore:0     wool:0     wood:0     
 Rest object cards: road: 12     city: 2     town: 3     
 WRITE COMMAND, kate
+Bad command!
+WRITE COMMAND, kate
 **********FIELD**********
 Roads:
 At pos (-1,-1) u, owner: 1
@@ -1676,6 +1678,8 @@ Rest object cards: road: 13     city: 3     town: 2
 Player #2, name: max, score: 3
 Resourses: grain:0     claim:0     ore:0     wool:0     wood:0     
 Rest object cards: road: 12     city: 2     town: 3     
+WRITE COMMAND, kate
+Nonexistent specificator 
 WRITE COMMAND, kate
 **********FIELD**********
 Roads:

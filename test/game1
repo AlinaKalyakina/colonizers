@@ -69,8 +69,10 @@ set_dice 7
 build_city -1 -1 t
 move_robber 1 -1
 rob alina
+set_rob max flower
 set_rob max claim
 exchange grain wood
+exchange lidj dkjad
 end_exchange
 build_town -1 1 t
 build_road 3 4 u
