@@ -117,7 +117,7 @@ void Interface::play() {
         curplayer = engine.get_cur_player();
         show_field();
     }
-    std::cout << curplayer.name << " won!!!" << std::endl;
+    std::cout << curplayer.name << " WON!!!" << std::endl;
 }
 
 void Interface::choose_function(User_cmd cmd) {

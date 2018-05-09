@@ -15,7 +15,7 @@ std::string Error::what() {
     case Error_code::NOT_ENOUGH_PLAYER_RESOURCE:
         return "You don't have enough resources to build this object";
     case Error_code::NO_PLAYERS:
-        return "Register any player before starting game";
+        return "Register more players before starting game";
     case Error_code::OBJ_EXISTS:
         return "Object in this position already exists";
     case Error_code::PLAYER_EXISTS:

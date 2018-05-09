@@ -71,7 +71,7 @@ void Engine::start_game(field_ptr x) {
     if (state != GameState::PLAYERS_REGISTRATION) {
         throw Error(Error_code::PROHIBITED_COMMAND);
     }
-    if (players.size() == 0) {
+    if (players.size() < int(Limits::MIN_NUM_OF_PLAYERS)) {
         throw Error(Error_code::NO_PLAYERS);
     }
     std::srand(std::time(nullptr));

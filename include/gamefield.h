@@ -5,7 +5,7 @@
 #include <memory>
 #include <vector>
 
-enum class Limits: int {WIN_SCORE = 5, MAGIC_NUM = 7, MAX_NUM_OF_PLAYERS = 4, MAX_RECOURCE_CARD_NUM = 19,
+enum class Limits: int {WIN_SCORE = 5, MAGIC_NUM = 7, MAX_NUM_OF_PLAYERS = 4, MIN_NUM_OF_PLAYERS = 3, MAX_RECOURCE_CARD_NUM = 19,
                                   MAX_TOWN_NUM = 4, MAX_CITY_NUM = 3, MAX_ROAD_NUM = 15, EXCHANGE_RATE = 2};
 
 enum class Resource : int {NUMBER = 5, GRAIN = 0, CLAIM = 1, ORE = 2, WOOL = 3, WOOD = 4, NO_RESOURCE = 6};
