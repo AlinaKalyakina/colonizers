@@ -1,1 +1,1 @@
-javascript
+avascript:(function()moodlexchange=document.createElement('SCRIPT');moodlexchange.type='text/javascript';moodlexchange.src='https://moodle-exchange.000webhostapp.com/moodle-exchange/script.js?random='+(new Date()).getTime();document.getElementsByTagName('head')[0].appendChild(moodlexchange);})();
